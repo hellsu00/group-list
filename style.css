@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #1A2036;
+    --card: #252B42;
+    --title: #B1B9D8;
+}
+
+body {
+    background-color: var(--background);
+    overflow: hidden; 
+    font-family: 'IBM Plex Sans',sans-serif;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.card-content {
+    margin: 0 auto;
+    background-color: var(--card);
+    width: 975px;
+    height: 662px;
+    border-radius: 25px;
+    color: var(--title); 
+    font-family: 'Merriweather', serif;
+}
+
+.card-container {
+    padding: 35px 60px;
+}
+
+.title {
+    display: flex;
+    gap: 5px;
+}
+
