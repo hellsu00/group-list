@@ -8,11 +8,12 @@
   --background: #1a2036;
   --card: #252b42;
   --title: #b1b9d8;
-  --card-bg: #2E3650 ;
+  --bg-create: #2e3650;
 }
 
 body {
   background-color: var(--background);
+  overflow: hidden;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -30,23 +31,23 @@ body {
   height: 662px;
   border-radius: 25px;
   color: var(--title);
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .card-container {
   display: flex;
-  padding: 35px 60px 35px 35px;
+  padding: 35px 60px 35px;
 }
 
 .title {
+  align-items: center;
   display: flex;
-  align-items: center:
   gap: 5px;
 }
 
 .title img {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 aside {
@@ -57,68 +58,80 @@ aside {
   background-color: var(--background);
   gap: 5px;
   width: 88px;
-  height: 592px;
+  height: 552px;
   border-radius: 20px;
-}
-
-aside img {
-width: 100%;
-height: auto;
-max-width: 32px;
-display: block;
 }
 
 aside img:hover {
   background-color: var(--card);
   border-radius: 10px;
-  cursor: pointer;
+  padding: 13px;
 }
 
 .wrapper {
-display: flex;
-flex-direction: column;
-width: 100%;
-padding: 25px 60px 0 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 60px 0 40px;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 35px;
 }
 
-
 .create {
-    background-color: var(--card-bg);
-    width: 173px;
-    height: 208px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--bg-create);
+  width: 173px;
+  height: 208px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
 }
 
 .create button {
-    border: none;
-    background-color: var(--background);
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
+  border: none;
+  background-color: var(--background);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
 }
 
-.switch button{
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--background);
+.create span {
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.switch button img:first-child {
-    background-color: var(--background)
+.switch {
+  display: flex;
+  align-items: center;
 }
 
 .switch button {
-    background-color: transparent;
-    border: none;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.switch button:first-child {
+  border-radius: 10px 0 0 10px;
+  background-color: var(--background);
+}
+
+.switch button:last-child {
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--background);
+}
+.group-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
